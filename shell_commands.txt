@@ -1,0 +1,64 @@
+python
+from app import db     					# no error
+db.create_all()    						# no error
+
+
+# now if open the flask directory , a file named 'site.db'is created
+###########
+# The file can be viewed via a separate terminal tab
+less site.db
+
+#??? It is NOT empty. Scrolling down gives details of the User table created
+# it is currently empty 
+
+# go back to terminal . After db.create_all() 
+from app import User
+
+########### create an instance of User
+user_regular = User(username='user', email='user@loonycorn.com', password='loony') 
+
+# haven't specified id for this user, so it will assign this user a unique id automatically
+# default value for the image file
+
+db.session.add(user_regular)
+
+########### similarly add another user also
+
+user_admin = User(username='admin', email='admin@loonycorn.com', password='password') 
+db.session.add(user_admin)
+
+db.session.commit()
+
+# to display all the users
+User.query.all()
+
+# to display first user
+User.query.first()
+
+# to filter by user name
+User.query.filter_by(username='admin').all()
+
+user = User.query.filter_by(username='admin').first()
+
+# so now it is possible to get the user's id
+
+user
+
+user.id
+
+# to fetch a user with specific id
+
+user = User.query.get(1)
+
+########## View the user details
+user
+
+########## View the site.db file again
+less site.db
+ 
+# to delete the database and to recreate it
+db.drop_all()
+db.create_all()
+
+# verify
+User.query.all() 
