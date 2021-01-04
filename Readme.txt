@@ -60,14 +60,3 @@ after inserting some data
 
 
 pip install flask-login
-
-
-
-lets say i develop brand new gui for 
-end user to key in input data and then 
-when it tries to invoke any REST API then 
-prior to that we need authorization so there 
-certificates are required to authorize user.
-that cert i was referring to
-
-https://hubconnect.uhg.com/thread/138342
