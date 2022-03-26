@@ -20,6 +20,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -66,6 +67,7 @@
       <workItem from="1648198938489" duration="4000" />
       <workItem from="1648198960906" duration="222000" />
       <workItem from="1648199248144" duration="1059000" />
+      <workItem from="1648298938056" duration="44000" />
     </task>
     <servers />
   </component>
